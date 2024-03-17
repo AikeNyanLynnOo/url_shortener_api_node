@@ -14,7 +14,7 @@ async function handleGenerateNewShortURL(req, res) {
 
   return res.json({
     id: shortID,
-    short_url: `'https://'${req.headers.host}/${shortID}`,
+    short_url: `'https://${req.headers.host}/${shortID}`,
     long_url: body.url,
   });
 }
